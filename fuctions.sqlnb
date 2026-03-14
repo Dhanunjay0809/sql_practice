@@ -1,0 +1,25 @@
+cells:
+  - kind: 2
+    value: "CREATE or REPLACE FUNCTION calculate_bonus (unit_price*quantity
+      NUMBER)\r
+
+      RETURN NUMBER\r
+
+      IS\r
+
+      bonus NUMBER;\r
+
+      BEGIN\r
+
+      \    bonus := unit_price*quantity * 0.10;\r
+
+      \    RETURN bonus;\r
+
+      END;\r\n"
+    languageId: oracle-sql
+  - kind: 2
+    value: SELECT unit_price*quantity as salary calculate_bonus(salary) from orders;
+    languageId: oracle-sql
+  - kind: 2
+    value: ""
+    languageId: oracle-sql
